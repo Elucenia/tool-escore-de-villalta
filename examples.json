@@ -1,0 +1,153 @@
+[
+  {
+    "label": "Tudo ausente: 0, sem síndrome",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "score": 0,
+      "level": "low"
+    },
+    "originalInput": {
+      "ulcera": "0"
+    },
+    "expandedZeroOptions": [
+      "dor",
+      "caibras",
+      "peso",
+      "parestesia",
+      "prurido",
+      "edema",
+      "induracao",
+      "hiperpig",
+      "rubor",
+      "ectasia",
+      "dor_compr"
+    ]
+  },
+  {
+    "label": "Cinco itens leves: 5, síndrome leve (limite)",
+    "input": {
+      "dor": "1",
+      "caibras": "1",
+      "peso": "1",
+      "edema": "1",
+      "hiperpig": "1",
+      "ulcera": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "induracao": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "score": 5,
+      "level": "mid",
+      "verdict": "leve"
+    },
+    "originalInput": {
+      "dor": "1",
+      "caibras": "1",
+      "peso": "1",
+      "edema": "1",
+      "hiperpig": "1",
+      "ulcera": "0"
+    },
+    "expandedZeroOptions": [
+      "parestesia",
+      "prurido",
+      "induracao",
+      "rubor",
+      "ectasia",
+      "dor_compr"
+    ]
+  },
+  {
+    "label": "Seis itens moderados: 12, síndrome moderada",
+    "input": {
+      "dor": "2",
+      "peso": "2",
+      "edema": "2",
+      "induracao": "2",
+      "hiperpig": "2",
+      "ectasia": "2",
+      "ulcera": "0",
+      "caibras": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "rubor": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "score": 12,
+      "level": "high",
+      "verdict": "moderada"
+    },
+    "originalInput": {
+      "dor": "2",
+      "peso": "2",
+      "edema": "2",
+      "induracao": "2",
+      "hiperpig": "2",
+      "ectasia": "2",
+      "ulcera": "0"
+    },
+    "expandedZeroOptions": [
+      "caibras",
+      "parestesia",
+      "prurido",
+      "rubor",
+      "dor_compr"
+    ]
+  },
+  {
+    "label": "Úlcera com 3 pontos: grave",
+    "input": {
+      "dor": "1",
+      "edema": "2",
+      "ulcera": "1",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "score": 3,
+      "level": "high",
+      "verdict": "grave"
+    },
+    "originalInput": {
+      "dor": "1",
+      "edema": "2",
+      "ulcera": "1"
+    },
+    "expandedZeroOptions": [
+      "caibras",
+      "peso",
+      "parestesia",
+      "prurido",
+      "induracao",
+      "hiperpig",
+      "rubor",
+      "ectasia",
+      "dor_compr"
+    ]
+  }
+]

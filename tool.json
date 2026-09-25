@@ -1,0 +1,296 @@
+{
+  "tool": {
+    "id": "escore-de-villalta",
+    "title": "Escore de Villalta",
+    "short": "Diagnóstico e gravidade da síndrome pós-trombótica",
+    "desc": "Calcule o escore de Villalta, recomendado pela ISTH, para diagnosticar e graduar a síndrome pós-trombótica após trombose venosa profunda de membro inferior.",
+    "lead": "Soma 5 sintomas e 6 sinais clínicos na perna que teve TVP para diagnosticar a síndrome pós-trombótica e classificar sua gravidade.",
+    "spec": [
+      "angiologia",
+      "cirurgia-vascular",
+      "hematologia-e-hemoterapia"
+    ],
+    "tier": 1,
+    "fields": [
+      [
+        "dor",
+        "Sintoma: dor",
+        "radio",
+        {
+          "opts": {
+            "0": "Ausente",
+            "1": "Leve",
+            "2": "Moderado",
+            "3": "Grave"
+          }
+        }
+      ],
+      [
+        "caibras",
+        "Sintoma: câimbras",
+        "radio",
+        {
+          "opts": {
+            "0": "Ausente",
+            "1": "Leve",
+            "2": "Moderado",
+            "3": "Grave"
+          }
+        }
+      ],
+      [
+        "peso",
+        "Sintoma: peso na perna",
+        "radio",
+        {
+          "opts": {
+            "0": "Ausente",
+            "1": "Leve",
+            "2": "Moderado",
+            "3": "Grave"
+          }
+        }
+      ],
+      [
+        "parestesia",
+        "Sintoma: parestesia",
+        "radio",
+        {
+          "opts": {
+            "0": "Ausente",
+            "1": "Leve",
+            "2": "Moderado",
+            "3": "Grave"
+          }
+        }
+      ],
+      [
+        "prurido",
+        "Sintoma: prurido",
+        "radio",
+        {
+          "opts": {
+            "0": "Ausente",
+            "1": "Leve",
+            "2": "Moderado",
+            "3": "Grave"
+          }
+        }
+      ],
+      [
+        "edema",
+        "Sinal: edema pré-tibial",
+        "radio",
+        {
+          "opts": {
+            "0": "Ausente",
+            "1": "Leve",
+            "2": "Moderado",
+            "3": "Grave"
+          }
+        }
+      ],
+      [
+        "induracao",
+        "Sinal: endurecimento da pele",
+        "radio",
+        {
+          "opts": {
+            "0": "Ausente",
+            "1": "Leve",
+            "2": "Moderado",
+            "3": "Grave"
+          }
+        }
+      ],
+      [
+        "hiperpig",
+        "Sinal: hiperpigmentação",
+        "radio",
+        {
+          "opts": {
+            "0": "Ausente",
+            "1": "Leve",
+            "2": "Moderado",
+            "3": "Grave"
+          }
+        }
+      ],
+      [
+        "rubor",
+        "Sinal: vermelhidão",
+        "radio",
+        {
+          "opts": {
+            "0": "Ausente",
+            "1": "Leve",
+            "2": "Moderado",
+            "3": "Grave"
+          }
+        }
+      ],
+      [
+        "ectasia",
+        "Sinal: ectasia venosa",
+        "radio",
+        {
+          "opts": {
+            "0": "Ausente",
+            "1": "Leve",
+            "2": "Moderado",
+            "3": "Grave"
+          }
+        }
+      ],
+      [
+        "dor_compr",
+        "Sinal: dor à compressão da panturrilha",
+        "radio",
+        {
+          "opts": {
+            "0": "Ausente",
+            "1": "Leve",
+            "2": "Moderado",
+            "3": "Grave"
+          }
+        }
+      ],
+      [
+        "ulcera",
+        "Úlcera venosa na perna afetada",
+        "radio",
+        {
+          "opts": {
+            "0": "Não",
+            "1": "Sim"
+          }
+        }
+      ]
+    ],
+    "formula": "<p>Cada um dos 5 sintomas e 6 sinais recebe 0 (ausente), 1 (leve), 2 (moderado) ou 3 (grave). Soma de 0 a 33.</p><p>Síndrome pós-trombótica se ≥ 5 pontos <strong>ou</strong> úlcera venosa. Gravidade: 5–9 leve; 10–14 moderada; ≥ 15 ou úlcera = grave.</p>",
+    "table": [
+      [
+        "Pontos",
+        "Classificação"
+      ],
+      [
+        "0–4",
+        "Sem síndrome pós-trombótica"
+      ],
+      [
+        "5–9",
+        "Leve"
+      ],
+      [
+        "10–14",
+        "Moderada"
+      ],
+      [
+        "≥ 15 ou úlcera",
+        "Grave"
+      ]
+    ],
+    "tips": [
+      "Avalie depois da fase aguda: sintomas nos primeiros meses após a TVP podem ser da própria trombose. A ISTH sugere aguardar pelo menos 3 a 6 meses.",
+      "Se houver insuficiência venosa prévia na mesma perna, o escore superestima a síndrome: registre o estado basal.",
+      "Compressão elástica reduz sintomas em quem já tem a síndrome; o uso rotineiro para prevenção após TVP não se mostrou eficaz (estudo SOX).",
+      "Anticoagulação adequada e sem interrupções na fase aguda é a principal medida preventiva; recorrência ipsilateral aumenta o risco."
+    ],
+    "sources": [
+      [
+        "Kahn SR et al. Definition of post-thrombotic syndrome of the leg for use in clinical investigations: a recommendation for standardization. J Thromb Haemost, 2009.",
+        "https://doi.org/10.1111/j.1538-7836.2009.03294.x"
+      ]
+    ],
+    "cases": [
+      [
+        "Tudo ausente: 0, sem síndrome",
+        {
+          "ulcera": "0"
+        },
+        {
+          "score": 0,
+          "level": "low"
+        }
+      ],
+      [
+        "Cinco itens leves: 5, síndrome leve (limite)",
+        {
+          "dor": "1",
+          "caibras": "1",
+          "peso": "1",
+          "edema": "1",
+          "hiperpig": "1",
+          "ulcera": "0"
+        },
+        {
+          "score": 5,
+          "level": "mid",
+          "verdict": "leve"
+        }
+      ],
+      [
+        "Seis itens moderados: 12, síndrome moderada",
+        {
+          "dor": "2",
+          "peso": "2",
+          "edema": "2",
+          "induracao": "2",
+          "hiperpig": "2",
+          "ectasia": "2",
+          "ulcera": "0"
+        },
+        {
+          "score": 12,
+          "level": "high",
+          "verdict": "moderada"
+        }
+      ],
+      [
+        "Úlcera com 3 pontos: grave",
+        {
+          "dor": "1",
+          "edema": "2",
+          "ulcera": "1"
+        },
+        {
+          "score": 3,
+          "level": "high",
+          "verdict": "grave"
+        }
+      ]
+    ],
+    "batch": "torax-vascular",
+    "kind": "Calculadora",
+    "config": null,
+    "areaId": "cardiotoracica",
+    "clinicalReview": "pending",
+    "sourceReview": "pending",
+    "sourceFile": "app/content/ferramentas/torax-vascular.php",
+    "arithmeticTest": {
+      "status": "passed",
+      "testedAt": "2026-09-25",
+      "total": 4,
+      "passed": 4,
+      "failures": []
+    },
+    "independentArithmeticTest": {
+      "status": "not-tested",
+      "testedAt": null,
+      "total": 0,
+      "passed": 0,
+      "cases": []
+    }
+  },
+  "review": {
+    "status": "needs-review",
+    "reason": "Revisão documental e clínica independente pendente.",
+    "clinicalValidation": "not-performed"
+  },
+  "sourceFile": {
+    "path": "app/content/ferramentas/torax-vascular.php",
+    "sha256": "e99bbd1938580ff9b46e0252fdd8cb72e87c63869f934005b8ef6d807ce8b6e2",
+    "bytes": 91275
+  },
+  "clinicalValidation": "not-performed"
+}
