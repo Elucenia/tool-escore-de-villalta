@@ -1,11 +1,11 @@
-/* tool-escore-de-villalta · Elucenia · https://github.com/Elucenia/tool-escore-de-villalta
-   Copyright (c) 2026 Elucenia · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
+/* tool-escore-de-villalta · ELUCENIA · https://github.com/Elucenia/tool-escore-de-villalta
+   Copyright (c) 2026 ELUCENIA · Felipe Guedes (fgxdev.com). Licensed under the Apache License 2.0: keep this notice and the NOTICE file, and mark your changes.
    Standalone integration. Package metadata and rights: README.md. */
 (function(root){'use strict';
 function freeze(value){if(value&&typeof value==='object'){for(const item of Object.values(value))freeze(item);Object.freeze(value);}return value;}
 const TOOL=freeze({"id":"escore-de-villalta","title":"Escore de Villalta","fields":[["dor","Sintoma: dor","radio",{"opts":{"0":"Ausente","1":"Leve","2":"Moderado","3":"Grave"}}],["caibras","Sintoma: câimbras","radio",{"opts":{"0":"Ausente","1":"Leve","2":"Moderado","3":"Grave"}}],["peso","Sintoma: peso na perna","radio",{"opts":{"0":"Ausente","1":"Leve","2":"Moderado","3":"Grave"}}],["parestesia","Sintoma: parestesia","radio",{"opts":{"0":"Ausente","1":"Leve","2":"Moderado","3":"Grave"}}],["prurido","Sintoma: prurido","radio",{"opts":{"0":"Ausente","1":"Leve","2":"Moderado","3":"Grave"}}],["edema","Sinal: edema pré-tibial","radio",{"opts":{"0":"Ausente","1":"Leve","2":"Moderado","3":"Grave"}}],["induracao","Sinal: endurecimento da pele","radio",{"opts":{"0":"Ausente","1":"Leve","2":"Moderado","3":"Grave"}}],["hiperpig","Sinal: hiperpigmentação","radio",{"opts":{"0":"Ausente","1":"Leve","2":"Moderado","3":"Grave"}}],["rubor","Sinal: vermelhidão","radio",{"opts":{"0":"Ausente","1":"Leve","2":"Moderado","3":"Grave"}}],["ectasia","Sinal: ectasia venosa","radio",{"opts":{"0":"Ausente","1":"Leve","2":"Moderado","3":"Grave"}}],["dor_compr","Sinal: dor à compressão da panturrilha","radio",{"opts":{"0":"Ausente","1":"Leve","2":"Moderado","3":"Grave"}}],["ulcera","Úlcera venosa na perna afetada","radio",{"opts":{"0":"Não","1":"Sim"}}]],"config":null,"reviewStatus":"needs-review","clinicalValidation":"not-performed"});
 const window={};
-/* Elucenia arithmetic registry. No DOM access, storage, telemetry or network requests. */
+/* ELUCENIA arithmetic registry. No DOM access, storage, telemetry or network requests. */
 (function(root){
   'use strict';
   const CALC={fn:Object.create(null)};
