@@ -1,0 +1,818 @@
+[
+  {
+    "name": "Reject null input",
+    "input": null,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject array input",
+    "input": [],
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject string input",
+    "input": "invalid",
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject numeric input",
+    "input": 1,
+    "expected": {
+      "code": "INVALID_INPUT",
+      "field": null
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field dor",
+    "input": {
+      "ulcera": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "dor"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field dor",
+    "input": {
+      "ulcera": "0",
+      "dor": "",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "dor"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option dor",
+    "input": {
+      "ulcera": "0",
+      "dor": "__ELUCENIA_INVALID_OPTION__",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "dor"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field caibras",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "caibras"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field caibras",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "caibras"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option caibras",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "__ELUCENIA_INVALID_OPTION__",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "caibras"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field peso",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "peso"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field peso",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "peso"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option peso",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "__ELUCENIA_INVALID_OPTION__",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "peso"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field parestesia",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "parestesia"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field parestesia",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "parestesia"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option parestesia",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "__ELUCENIA_INVALID_OPTION__",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "parestesia"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field prurido",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "prurido"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field prurido",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "prurido"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option prurido",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "__ELUCENIA_INVALID_OPTION__",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "prurido"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field edema",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "edema"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field edema",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "edema"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option edema",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "__ELUCENIA_INVALID_OPTION__",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "edema"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field induracao",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "induracao"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field induracao",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "induracao"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option induracao",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "__ELUCENIA_INVALID_OPTION__",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "induracao"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field hiperpig",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "hiperpig"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field hiperpig",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "hiperpig"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option hiperpig",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "__ELUCENIA_INVALID_OPTION__",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "hiperpig"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field rubor",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "rubor"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field rubor",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "rubor"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option rubor",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "__ELUCENIA_INVALID_OPTION__",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "rubor"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field ectasia",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "ectasia"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field ectasia",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "ectasia"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option ectasia",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "__ELUCENIA_INVALID_OPTION__",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "ectasia"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field dor_compr",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "dor_compr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field dor_compr",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": ""
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "dor_compr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option dor_compr",
+    "input": {
+      "ulcera": "0",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "__ELUCENIA_INVALID_OPTION__"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "dor_compr"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject missing required field ulcera",
+    "input": {
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "ulcera"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject empty required field ulcera",
+    "input": {
+      "ulcera": "",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "REQUIRED_FIELD",
+      "field": "ulcera"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  },
+  {
+    "name": "Reject undocumented option ulcera",
+    "input": {
+      "ulcera": "__ELUCENIA_INVALID_OPTION__",
+      "dor": "0",
+      "caibras": "0",
+      "peso": "0",
+      "parestesia": "0",
+      "prurido": "0",
+      "edema": "0",
+      "induracao": "0",
+      "hiperpig": "0",
+      "rubor": "0",
+      "ectasia": "0",
+      "dor_compr": "0"
+    },
+    "expected": {
+      "code": "INVALID_OPTION",
+      "field": "ulcera"
+    },
+    "scope": "Independently constructed schema/domain refusal; code observed from the pinned adapter, no clinical oracle"
+  }
+]

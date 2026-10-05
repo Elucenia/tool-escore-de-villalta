@@ -5,12 +5,12 @@
     "short": "Diagnóstico e gravidade da síndrome pós-trombótica",
     "desc": "Calcule o escore de Villalta, recomendado pela ISTH, para diagnosticar e graduar a síndrome pós-trombótica após trombose venosa profunda de membro inferior.",
     "lead": "Soma 5 sintomas e 6 sinais clínicos na perna que teve TVP para diagnosticar a síndrome pós-trombótica e classificar sua gravidade.",
+    "kind": "Calculadora",
     "spec": [
       "angiologia",
       "cirurgia-vascular",
       "hematologia-e-hemoterapia"
     ],
-    "tier": 1,
     "fields": [
       [
         "dor",
@@ -168,34 +168,6 @@
       ]
     ],
     "formula": "<p>Cada um dos 5 sintomas e 6 sinais recebe 0 (ausente), 1 (leve), 2 (moderado) ou 3 (grave). Soma de 0 a 33.</p><p>Síndrome pós-trombótica se ≥ 5 pontos <strong>ou</strong> úlcera venosa. Gravidade: 5–9 leve; 10–14 moderada; ≥ 15 ou úlcera = grave.</p>",
-    "table": [
-      [
-        "Pontos",
-        "Classificação"
-      ],
-      [
-        "0–4",
-        "Sem síndrome pós-trombótica"
-      ],
-      [
-        "5–9",
-        "Leve"
-      ],
-      [
-        "10–14",
-        "Moderada"
-      ],
-      [
-        "≥ 15 ou úlcera",
-        "Grave"
-      ]
-    ],
-    "tips": [
-      "Avalie depois da fase aguda: sintomas nos primeiros meses após a TVP podem ser da própria trombose. A ISTH sugere aguardar pelo menos 3 a 6 meses.",
-      "Se houver insuficiência venosa prévia na mesma perna, o escore superestima a síndrome: registre o estado basal.",
-      "Compressão elástica reduz sintomas em quem já tem a síndrome; o uso rotineiro para prevenção após TVP não se mostrou eficaz (estudo SOX).",
-      "Anticoagulação adequada e sem interrupções na fase aguda é a principal medida preventiva; recorrência ipsilateral aumenta o risco."
-    ],
     "sources": [
       [
         "Kahn SR et al. Definition of post-thrombotic syndrome of the leg for use in clinical investigations: a recommendation for standardization. J Thromb Haemost, 2009.",
@@ -260,9 +232,6 @@
         }
       ]
     ],
-    "kind": "Calculadora",
-    "config": null,
-    "clinicalReview": "pending",
     "arithmeticTest": {
       "status": "passed",
       "testedAt": "2026-09-25",
@@ -271,17 +240,571 @@
       "failures": []
     },
     "independentArithmeticTest": {
-      "status": "not-tested",
-      "testedAt": null,
-      "total": 0,
-      "passed": 0,
-      "cases": []
+      "status": "passed",
+      "testedAt": "2026-10-04T19:21:17.181Z",
+      "total": 1116,
+      "passed": 1116,
+      "sourceRowCount": 1116,
+      "uniqueApiInputCount": 1116,
+      "sourceContextCount": 1116,
+      "embeddedCasesAreSubset": true,
+      "embeddedCaseCount": 4,
+      "caseStorage": {
+        "mode": "complete-downloadable-bank-with-inline-subset",
+        "file": "independent-source-cases.json",
+        "sha256": "f9212cda089c5dcb5e269feca0aabcd90048cfb9ea9257a21136560b14d08685",
+        "total": 1116,
+        "bankRowCount": 1116,
+        "uniqueApiInputCount": 1116,
+        "sourceContextCount": 1116,
+        "expectedEvidence": [
+          {
+            "file": "reports/review-20261003/villalta-mess-isth-independent-expectations-final27.json",
+            "sha256": "6d591e22f0fa891dc22b9833ad2f6ab2744cbdf1fe7025cfc872fa9c2e0ca42b"
+          },
+          {
+            "file": "reports/review-20261003/villalta-mess-isth-primary-observations-final27.cjs",
+            "sha256": "3c4045b2f9ab021d826973bd2820e437b67a1878b2b0f25ddc0993ea0a22a1d4"
+          }
+        ],
+        "obtainedEvidence": {
+          "file": "reports/review-20261003/villalta-mess-isth-independent-source-check-final27.json",
+          "sha256": "b1de4431734f1a15edfa671bba7d0c0da5464a310c0983a2bf3e17cb6e2b453a"
+        },
+        "packagingRequirement": "Compose separately owned source/rubric/edition changes and fresh build/package/browser bindings before publication."
+      },
+      "inputIdentity": {
+        "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+        "sourceRows": 1116,
+        "uniqueApiInputs": 1116,
+        "duplicateRows": 0,
+        "expectationAudit": {
+          "file": "reports/review-20261003/villalta-mess-isth-independent-expectations-final27.json",
+          "sha256": "6d591e22f0fa891dc22b9833ad2f6ab2744cbdf1fe7025cfc872fa9c2e0ca42b"
+        }
+      },
+      "scope": "Exact11-item selected-code sum and displayed numeric total only; all codes in each of11components and every pair of components at zero background, plus vectors attaining every integer total0–33, each crossed with ulcer0/1. This is structured finite coverage, not all2×4^11 input combinations. Ulcer contributes no item points. No PTS presence/severity, continuous-research ulcer adjustment, etiology or treatment assertion.",
+      "sources": [
+        {
+          "primaryObservations": {
+            "file": "reports/review-20261003/villalta-mess-isth-primary-observations-final27.cjs",
+            "sha256": "3c4045b2f9ab021d826973bd2820e437b67a1878b2b0f25ddc0993ea0a22a1d4"
+          },
+          "id": "escore-de-villalta",
+          "sources": [
+            {
+              "doi": "10.1111/j.1538-7836.2009.03294.x",
+              "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/j.1538-7836.2009.03294.x",
+              "access": "Official publisher full HTML directly opened.",
+              "readScope": "Table1 plus recommended definition points1–3 and administration/discussion paragraphs; no full1994 derivation article reading claimed."
+            }
+          ],
+          "pointContract": {
+            "symptomKeys": [
+              "dor",
+              "caibras",
+              "peso",
+              "parestesia",
+              "prurido"
+            ],
+            "signKeys": [
+              "edema",
+              "induracao",
+              "hiperpig",
+              "rubor",
+              "ectasia",
+              "dor_compr"
+            ],
+            "eachSelectedCode": [
+              0,
+              1,
+              2,
+              3
+            ],
+            "sum": [
+              0,
+              33
+            ],
+            "ulcerSelectedCode": [
+              0,
+              1
+            ],
+            "sourceContinuousUlcerConvention": "If an ulcer is present and item sum<15, the2009 recommendation assigns15 for a continuous research severity measure. This is distinct from the raw11-item arithmetic sum."
+          },
+          "scope": "Exact11-item selected-code sum and displayed numeric total only; all codes in each of11components and every pair of components at zero background, plus vectors attaining every integer total0–33, each crossed with ulcer0/1. This is structured finite coverage, not all2×4^11 input combinations. Ulcer contributes no item points. No PTS presence/severity, continuous-research ulcer adjustment, etiology or treatment assertion.",
+          "limitations": "Source scope concerns a previously documented DVT leg and recommends no PTS diagnosis before three months. The separate ulcer-based continuous score convention is not the component sum. Clinical examination, competing causes, assessment timing, category/presence validation and original1994 derivation are outside arithmetic coverage."
+        }
+      ],
+      "evidencePath": "reports/review-20261003/villalta-mess-isth-independent-source-check-final27.json",
+      "evidenceSha256": "b1de4431734f1a15edfa671bba7d0c0da5464a310c0983a2bf3e17cb6e2b453a",
+      "independentPeer": {
+        "status": "passed-scoped-numeric",
+        "evidence": {
+          "file": "reports/review-20261003/villalta-mess-isth-independent-peer-verify-final27.json",
+          "sha256": "ff8bc18b4b06912aac258ce96b6c33cacbe5a1d484b58e52cc9d6679ad462028"
+        },
+        "scope": "Independently read selected primary tables, own frozen source-point expectations and three adapters Node/isolatedChromium. Source scope partial; local MESS72 zero cases separated; no clinical/rights/full-method approval."
+      },
+      "freshAdapterExecutions": 3348,
+      "freshVmExecutions": 3348,
+      "actualBrowserEvidenceScope": "Original isolated actual Chromium, each of the three exactly bound adapters, source-only rows. Separate local MESS72 extension is not part of this source bank.",
+      "implementations": [
+        {
+          "id": "escore-de-villalta",
+          "app": "website",
+          "file": "apps/website/private/tool-code/escore-de-villalta/calculator.js",
+          "sha256": "6d3d6830367b97a4d312f4036b339a68f2d7bda607a9ac347ed6b27a40bb2e53"
+        },
+        {
+          "id": "escore-de-villalta",
+          "app": "dashboard",
+          "file": "apps/dashboard/private/tool-code/escore-de-villalta/calculator.js",
+          "sha256": "6d3d6830367b97a4d312f4036b339a68f2d7bda607a9ac347ed6b27a40bb2e53"
+        },
+        {
+          "id": "escore-de-villalta",
+          "app": "command-center",
+          "file": "apps/command-center/private/tool-code/escore-de-villalta/calculator.js",
+          "sha256": "6d3d6830367b97a4d312f4036b339a68f2d7bda607a9ac347ed6b27a40bb2e53"
+        }
+      ],
+      "qualifications": [
+        "Source scope concerns a previously documented DVT leg and recommends no PTS diagnosis before three months. The separate ulcer-based continuous score convention is not the component sum. Clinical examination, competing causes, assessment timing, category/presence validation and original1994 derivation are outside arithmetic coverage.",
+        "MESS source bank excludes all72 local zero-ischemia examples. Those remain in the untouched original platform-extension receipt and are not counted as source conformity.",
+        "Only raw.score selected-point arithmetic is included. Clinical categories, main text, private level/verdict/note/rows, prognosis, diagnosis, management and unmeasured feature classification are excluded.",
+        "All source scenarios in this bank and the original donor reports remain retained. Mirror/runtime calculations do not multiply scenario counts. Inline four examples are a subset of the complete downloadable bank.",
+        "Source fields, rubric/edition labels, clinical scope notes and localization changes have separate ownership and must be composed without replacing whole catalogs. All862 historic fixtures/tolerances and approval flags remain unchanged.",
+        "Fresh source/build/packages and browser journey bindings are required before publication. No already-served website or final package proof is claimed by this preparation."
+      ],
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed",
+      "sourceRightsApproval": "not-performed",
+      "fullMethodConformance": "not-performed",
+      "metadataPackagingPeer": {
+        "status": "passed",
+        "scope": "Bounded independent review of the original source bank and its metadata/helper. Prospective code rebinding is separately re-executed below and requires the final composition peer; no human approval inferred.",
+        "peer": {
+          "file": "reports/review-20261003/villalta-mess-isth-bank-metadata-independent-review-western-final27.json",
+          "sha256": "8254f049e2cde19930dae4e5ef3b689175daa3a083b9a8a056d3650abcf8f1c5"
+        },
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed"
+      },
+      "prospectiveSource27Bindings": [
+        {
+          "file": "apps/website/private/tool-code/escore-de-villalta/calculator.js",
+          "sha256": "6d3d6830367b97a4d312f4036b339a68f2d7bda607a9ac347ed6b27a40bb2e53"
+        },
+        {
+          "file": "apps/dashboard/private/tool-code/escore-de-villalta/calculator.js",
+          "sha256": "6d3d6830367b97a4d312f4036b339a68f2d7bda607a9ac347ed6b27a40bb2e53"
+        },
+        {
+          "file": "apps/command-center/private/tool-code/escore-de-villalta/calculator.js",
+          "sha256": "6d3d6830367b97a4d312f4036b339a68f2d7bda607a9ac347ed6b27a40bb2e53"
+        }
+      ],
+      "prospectiveSource27Replay": {
+        "file": "reports/review-20261003/source27-complete-bank-current-replay-root-r3.json",
+        "sha256": "44c601f27d3d5051a8d55a581381112b58df36c7c4b6cfd24ce1249b263d6a2b"
+      },
+      "publicCandidateBankOmitted": true
+    },
+    "methodVersion": "Villalta/definição ISTH 2009:5 sintomas+6 sinais 0–3, total 0–33; úlcera agravante",
+    "implementationVersion": "escore-de-villalta@native-2026-10-03+6d3d6830367b",
+    "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/19175497/",
+    "versionEvidence": {
+      "status": "variant-and-source-edition-recorded",
+      "checkedAt": "2026-10-03",
+      "implementedVariant": "Cada um dos 5 sintomas e 6 sinais recebe 0 (ausente), 1 (leve), 2 (moderado) ou 3 (grave). Soma de 0 a 33. Síndrome pós-trombótica se ≥ 5 pontos ou úlcera venosa. Gravidade: 5–9 leve; 10–14 moderada; ≥ 15 ou úlcera = grave.",
+      "inputContract": {
+        "fields": [
+          {
+            "key": "dor",
+            "label": "Sintoma: dor",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Ausente",
+              "1": "Leve",
+              "2": "Moderado",
+              "3": "Grave"
+            }
+          },
+          {
+            "key": "caibras",
+            "label": "Sintoma: câimbras",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Ausente",
+              "1": "Leve",
+              "2": "Moderado",
+              "3": "Grave"
+            }
+          },
+          {
+            "key": "peso",
+            "label": "Sintoma: peso na perna",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Ausente",
+              "1": "Leve",
+              "2": "Moderado",
+              "3": "Grave"
+            }
+          },
+          {
+            "key": "parestesia",
+            "label": "Sintoma: parestesia",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Ausente",
+              "1": "Leve",
+              "2": "Moderado",
+              "3": "Grave"
+            }
+          },
+          {
+            "key": "prurido",
+            "label": "Sintoma: prurido",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Ausente",
+              "1": "Leve",
+              "2": "Moderado",
+              "3": "Grave"
+            }
+          },
+          {
+            "key": "edema",
+            "label": "Sinal: edema pré-tibial",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Ausente",
+              "1": "Leve",
+              "2": "Moderado",
+              "3": "Grave"
+            }
+          },
+          {
+            "key": "induracao",
+            "label": "Sinal: endurecimento da pele",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Ausente",
+              "1": "Leve",
+              "2": "Moderado",
+              "3": "Grave"
+            }
+          },
+          {
+            "key": "hiperpig",
+            "label": "Sinal: hiperpigmentação",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Ausente",
+              "1": "Leve",
+              "2": "Moderado",
+              "3": "Grave"
+            }
+          },
+          {
+            "key": "rubor",
+            "label": "Sinal: vermelhidão",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Ausente",
+              "1": "Leve",
+              "2": "Moderado",
+              "3": "Grave"
+            }
+          },
+          {
+            "key": "ectasia",
+            "label": "Sinal: ectasia venosa",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Ausente",
+              "1": "Leve",
+              "2": "Moderado",
+              "3": "Grave"
+            }
+          },
+          {
+            "key": "dor_compr",
+            "label": "Sinal: dor à compressão da panturrilha",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Ausente",
+              "1": "Leve",
+              "2": "Moderado",
+              "3": "Grave"
+            }
+          },
+          {
+            "key": "ulcera",
+            "label": "Úlcera venosa na perna afetada",
+            "type": "radio",
+            "optional": false,
+            "options": {
+              "0": "Não",
+              "1": "Sim"
+            }
+          }
+        ],
+        "hash": "7ca6adf3a388bf50589fb7cb5221c1c1b28afb237acf048504f2ed80b2fb2750"
+      },
+      "sourceEditions": [
+        {
+          "citation": "Kahn SR et al. Definition of post-thrombotic syndrome of the leg for use in clinical investigations: a recommendation for standardization. J Thromb Haemost, 2009.",
+          "url": "https://doi.org/10.1111/j.1538-7836.2009.03294.x",
+          "class": "primary-publication-abstract-or-metadata-read",
+          "publicationEditionConfirmed": true,
+          "fullTextRetrieved": false,
+          "formulaConformance": "not-assessed",
+          "publication": {
+            "title": "Definition of post-thrombotic syndrome of the leg for use in clinical investigations: a recommendation for standardization.",
+            "year": "2009",
+            "firstPublicationDate": "2009-01-19",
+            "doi": "10.1111/j.1538-7836.2009.03294.x",
+            "pmid": "19175497",
+            "journal": "Journal of thrombosis and haemostasis : JTH",
+            "authors": "Kahn SR, Partsch H, Vedantham S, Prandoni P, Kearon C, Subcommittee on Control of Anticoagulation of the Scientific and Standardization Committee of the International Society on Thrombosis and Haemostasis."
+          },
+          "primaryPublicationUrl": "https://pubmed.ncbi.nlm.nih.gov/19175497/",
+          "abstractAvailable": true,
+          "fullTextSha256": null,
+          "abstractSha256": "a0859e560029af109e2685293e4d9ee800c0092e73861857db996fa82f1c2ea2",
+          "matchedBy": "exact-DOI-or-PMID"
+        }
+      ],
+      "publicationEditionConfirmed": true,
+      "fullFormulaConformanceReviewed": false,
+      "formulaConformance": "Not established by bibliographic identity or automatic full-text retrieval; retain independent arithmetic and clinical review as separate evidence.",
+      "independentArithmetic": {
+        "status": "passed",
+        "testedAt": "2026-10-04T19:21:17.181Z",
+        "total": 1116,
+        "passed": 1116,
+        "sourceRowCount": 1116,
+        "uniqueApiInputCount": 1116,
+        "sourceContextCount": 1116,
+        "embeddedCasesAreSubset": true,
+        "embeddedCaseCount": 4,
+        "caseStorage": {
+          "mode": "complete-downloadable-bank-with-inline-subset",
+          "file": "independent-source-cases.json",
+          "sha256": "f9212cda089c5dcb5e269feca0aabcd90048cfb9ea9257a21136560b14d08685",
+          "total": 1116,
+          "bankRowCount": 1116,
+          "uniqueApiInputCount": 1116,
+          "sourceContextCount": 1116,
+          "expectedEvidence": [
+            {
+              "file": "reports/review-20261003/villalta-mess-isth-independent-expectations-final27.json",
+              "sha256": "6d591e22f0fa891dc22b9833ad2f6ab2744cbdf1fe7025cfc872fa9c2e0ca42b"
+            },
+            {
+              "file": "reports/review-20261003/villalta-mess-isth-primary-observations-final27.cjs",
+              "sha256": "3c4045b2f9ab021d826973bd2820e437b67a1878b2b0f25ddc0993ea0a22a1d4"
+            }
+          ],
+          "obtainedEvidence": {
+            "file": "reports/review-20261003/villalta-mess-isth-independent-source-check-final27.json",
+            "sha256": "b1de4431734f1a15edfa671bba7d0c0da5464a310c0983a2bf3e17cb6e2b453a"
+          },
+          "packagingRequirement": "Compose separately owned source/rubric/edition changes and fresh build/package/browser bindings before publication."
+        },
+        "inputIdentity": {
+          "definition": "Distinct JSON input objects within each method after recursively sorting object keys; array order, numeric values and JSON value types preserved. Uses stored input/inputs before implicit default completion, numeric coercion or clinical feature interpretation. Identity across different methods is not collapsed. Repeated scenarios are retained and coverage status is unchanged.",
+          "sourceRows": 1116,
+          "uniqueApiInputs": 1116,
+          "duplicateRows": 0,
+          "expectationAudit": {
+            "file": "reports/review-20261003/villalta-mess-isth-independent-expectations-final27.json",
+            "sha256": "6d591e22f0fa891dc22b9833ad2f6ab2744cbdf1fe7025cfc872fa9c2e0ca42b"
+          }
+        },
+        "scope": "Exact11-item selected-code sum and displayed numeric total only; all codes in each of11components and every pair of components at zero background, plus vectors attaining every integer total0–33, each crossed with ulcer0/1. This is structured finite coverage, not all2×4^11 input combinations. Ulcer contributes no item points. No PTS presence/severity, continuous-research ulcer adjustment, etiology or treatment assertion.",
+        "sources": [
+          {
+            "primaryObservations": {
+              "file": "reports/review-20261003/villalta-mess-isth-primary-observations-final27.cjs",
+              "sha256": "3c4045b2f9ab021d826973bd2820e437b67a1878b2b0f25ddc0993ea0a22a1d4"
+            },
+            "id": "escore-de-villalta",
+            "sources": [
+              {
+                "doi": "10.1111/j.1538-7836.2009.03294.x",
+                "url": "https://onlinelibrary.wiley.com/doi/full/10.1111/j.1538-7836.2009.03294.x",
+                "access": "Official publisher full HTML directly opened.",
+                "readScope": "Table1 plus recommended definition points1–3 and administration/discussion paragraphs; no full1994 derivation article reading claimed."
+              }
+            ],
+            "pointContract": {
+              "symptomKeys": [
+                "dor",
+                "caibras",
+                "peso",
+                "parestesia",
+                "prurido"
+              ],
+              "signKeys": [
+                "edema",
+                "induracao",
+                "hiperpig",
+                "rubor",
+                "ectasia",
+                "dor_compr"
+              ],
+              "eachSelectedCode": [
+                0,
+                1,
+                2,
+                3
+              ],
+              "sum": [
+                0,
+                33
+              ],
+              "ulcerSelectedCode": [
+                0,
+                1
+              ],
+              "sourceContinuousUlcerConvention": "If an ulcer is present and item sum<15, the2009 recommendation assigns15 for a continuous research severity measure. This is distinct from the raw11-item arithmetic sum."
+            },
+            "scope": "Exact11-item selected-code sum and displayed numeric total only; all codes in each of11components and every pair of components at zero background, plus vectors attaining every integer total0–33, each crossed with ulcer0/1. This is structured finite coverage, not all2×4^11 input combinations. Ulcer contributes no item points. No PTS presence/severity, continuous-research ulcer adjustment, etiology or treatment assertion.",
+            "limitations": "Source scope concerns a previously documented DVT leg and recommends no PTS diagnosis before three months. The separate ulcer-based continuous score convention is not the component sum. Clinical examination, competing causes, assessment timing, category/presence validation and original1994 derivation are outside arithmetic coverage."
+          }
+        ],
+        "evidencePath": "reports/review-20261003/villalta-mess-isth-independent-source-check-final27.json",
+        "evidenceSha256": "b1de4431734f1a15edfa671bba7d0c0da5464a310c0983a2bf3e17cb6e2b453a",
+        "independentPeer": {
+          "status": "passed-scoped-numeric",
+          "evidence": {
+            "file": "reports/review-20261003/villalta-mess-isth-independent-peer-verify-final27.json",
+            "sha256": "ff8bc18b4b06912aac258ce96b6c33cacbe5a1d484b58e52cc9d6679ad462028"
+          },
+          "scope": "Independently read selected primary tables, own frozen source-point expectations and three adapters Node/isolatedChromium. Source scope partial; local MESS72 zero cases separated; no clinical/rights/full-method approval."
+        },
+        "freshAdapterExecutions": 3348,
+        "freshVmExecutions": 3348,
+        "actualBrowserEvidenceScope": "Original isolated actual Chromium, each of the three exactly bound adapters, source-only rows. Separate local MESS72 extension is not part of this source bank.",
+        "implementations": [
+          {
+            "id": "escore-de-villalta",
+            "app": "website",
+            "file": "apps/website/private/tool-code/escore-de-villalta/calculator.js",
+            "sha256": "6d3d6830367b97a4d312f4036b339a68f2d7bda607a9ac347ed6b27a40bb2e53"
+          },
+          {
+            "id": "escore-de-villalta",
+            "app": "dashboard",
+            "file": "apps/dashboard/private/tool-code/escore-de-villalta/calculator.js",
+            "sha256": "6d3d6830367b97a4d312f4036b339a68f2d7bda607a9ac347ed6b27a40bb2e53"
+          },
+          {
+            "id": "escore-de-villalta",
+            "app": "command-center",
+            "file": "apps/command-center/private/tool-code/escore-de-villalta/calculator.js",
+            "sha256": "6d3d6830367b97a4d312f4036b339a68f2d7bda607a9ac347ed6b27a40bb2e53"
+          }
+        ],
+        "qualifications": [
+          "Source scope concerns a previously documented DVT leg and recommends no PTS diagnosis before three months. The separate ulcer-based continuous score convention is not the component sum. Clinical examination, competing causes, assessment timing, category/presence validation and original1994 derivation are outside arithmetic coverage.",
+          "MESS source bank excludes all72 local zero-ischemia examples. Those remain in the untouched original platform-extension receipt and are not counted as source conformity.",
+          "Only raw.score selected-point arithmetic is included. Clinical categories, main text, private level/verdict/note/rows, prognosis, diagnosis, management and unmeasured feature classification are excluded.",
+          "All source scenarios in this bank and the original donor reports remain retained. Mirror/runtime calculations do not multiply scenario counts. Inline four examples are a subset of the complete downloadable bank.",
+          "Source fields, rubric/edition labels, clinical scope notes and localization changes have separate ownership and must be composed without replacing whole catalogs. All862 historic fixtures/tolerances and approval flags remain unchanged.",
+          "Fresh source/build/packages and browser journey bindings are required before publication. No already-served website or final package proof is claimed by this preparation."
+        ],
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed",
+        "sourceRightsApproval": "not-performed",
+        "fullMethodConformance": "not-performed",
+        "metadataPackagingPeer": {
+          "status": "passed",
+          "scope": "Bounded independent review of the original source bank and its metadata/helper. Prospective code rebinding is separately re-executed below and requires the final composition peer; no human approval inferred.",
+          "peer": {
+            "file": "reports/review-20261003/villalta-mess-isth-bank-metadata-independent-review-western-final27.json",
+            "sha256": "8254f049e2cde19930dae4e5ef3b689175daa3a083b9a8a056d3650abcf8f1c5"
+          },
+          "clinicalApproval": "not-performed",
+          "professionalLanguageApproval": "not-performed",
+          "sourceRightsApproval": "not-performed",
+          "fullMethodConformance": "not-performed"
+        },
+        "prospectiveSource27Bindings": [
+          {
+            "file": "apps/website/private/tool-code/escore-de-villalta/calculator.js",
+            "sha256": "6d3d6830367b97a4d312f4036b339a68f2d7bda607a9ac347ed6b27a40bb2e53"
+          },
+          {
+            "file": "apps/dashboard/private/tool-code/escore-de-villalta/calculator.js",
+            "sha256": "6d3d6830367b97a4d312f4036b339a68f2d7bda607a9ac347ed6b27a40bb2e53"
+          },
+          {
+            "file": "apps/command-center/private/tool-code/escore-de-villalta/calculator.js",
+            "sha256": "6d3d6830367b97a4d312f4036b339a68f2d7bda607a9ac347ed6b27a40bb2e53"
+          }
+        ],
+        "prospectiveSource27Replay": {
+          "file": "reports/review-20261003/source27-complete-bank-current-replay-root-r3.json",
+          "sha256": "44c601f27d3d5051a8d55a581381112b58df36c7c4b6cfd24ce1249b263d6a2b"
+        },
+        "publicCandidateBankOmitted": true
+      },
+      "clinicalApproval": "not-performed",
+      "translationApproval": "not-performed",
+      "releaseApproval": "not-performed",
+      "implementationHash": "6d3d6830367b97a4d312f4036b339a68f2d7bda607a9ac347ed6b27a40bb2e53"
+    },
+    "limits": "A avaliação de síndrome pós-trombótica recomendada pela ISTH considera sinais e sintomas em membro previamente afetado por TVP e reconhece que não existe teste objetivo único de referência. Momento de avaliação, causas alternativas e critérios da versão são necessários; a soma isolada não confirma etiologia de edema ou dor.",
+    "sourceLimitEvidence": {
+      "checkedAt": "2026-10-04T02:52:02.916Z",
+      "scope": "Targeted source reading and authorial documentation, not full method or clinical approval.",
+      "sourceReviewFile": "remaining-native-population-limits-review.json",
+      "sourceReviewSha256": "ba61a9b120a338c518c34ba9f324558b12580e7f5371ea81304b030b45ea44a5",
+      "readingOutcome": "review-outcome-recorded",
+      "unresolved": [
+        "Resumo não fornece momento após TVP, tabela, úlcera ou limites de gravidade. Não confirma uso durante fase aguda nem outras causas de edema/dor."
+      ],
+      "fullMethodConformanceReviewed": false,
+      "clinicalApproval": "not-performed",
+      "professionalLanguageApproval": "not-performed"
     }
   },
-  "review": {
-    "status": "needs-review",
-    "reason": "Revisão documental e clínica independente pendente.",
-    "clinicalValidation": "not-performed"
+  "currentSource": {
+    "file": "apps/website/private/tool-code/escore-de-villalta/calculator.js",
+    "bytes": 5930,
+    "sha256": "6d3d6830367b97a4d312f4036b339a68f2d7bda607a9ac347ed6b27a40bb2e53"
   },
-  "clinicalValidation": "not-performed"
+  "sourceToolSha256": "534a37c16b6e007a473f05c416f618693b4a1093d5530e4f984f0db152212f11",
+  "omittedFullReferenceBanks": [
+    {
+      "rows": 4,
+      "sha256": "5865fa6ba76b3df3bb984da267acaafb6e16090ad3d711336171835b8c209af2",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    },
+    {
+      "rows": 4,
+      "sha256": "5865fa6ba76b3df3bb984da267acaafb6e16090ad3d711336171835b8c209af2",
+      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+    }
+  ],
+  "clinicalApproval": "not-performed",
+  "professionalLanguageApproval": "not-performed",
+  "sourceRightsApproval": "not-performed"
 }

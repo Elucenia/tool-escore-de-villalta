@@ -1,0 +1,422 @@
+{
+  "id": "escore-de-villalta",
+  "at": "2026-10-05T17:29:29.128Z",
+  "adapter": {
+    "file": "apps/website/private/tool-code/escore-de-villalta/calculator.js",
+    "bytes": 5930,
+    "sha256": "6d3d6830367b97a4d312f4036b339a68f2d7bda607a9ac347ed6b27a40bb2e53"
+  },
+  "cases": [
+    {
+      "name": "Tudo ausente: 0, sem síndrome",
+      "input": {
+        "ulcera": "0",
+        "dor": "0",
+        "caibras": "0",
+        "peso": "0",
+        "parestesia": "0",
+        "prurido": "0",
+        "edema": "0",
+        "induracao": "0",
+        "hiperpig": "0",
+        "rubor": "0",
+        "ectasia": "0",
+        "dor_compr": "0"
+      },
+      "obtained": {
+        "id": "escore-de-villalta",
+        "main": [
+          "0",
+          "de 33"
+        ],
+        "label": "Escore de Villalta",
+        "raw": {
+          "score": 0,
+          "ulcera": false
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.score",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.score",
+          "expected": 0,
+          "obtained": 0,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.ulcera",
+          "expected": false,
+          "obtained": false,
+          "scope": "Existing source-audit transport regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "0",
+          "obtained": "0",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "de 33",
+          "obtained": "de 33",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "Cinco itens leves: 5, síndrome leve (limite)",
+      "input": {
+        "dor": "1",
+        "caibras": "1",
+        "peso": "1",
+        "edema": "1",
+        "hiperpig": "1",
+        "ulcera": "0",
+        "parestesia": "0",
+        "prurido": "0",
+        "induracao": "0",
+        "rubor": "0",
+        "ectasia": "0",
+        "dor_compr": "0"
+      },
+      "obtained": {
+        "id": "escore-de-villalta",
+        "main": [
+          "5",
+          "de 33"
+        ],
+        "label": "Escore de Villalta",
+        "raw": {
+          "score": 5,
+          "ulcera": false
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.score",
+          "expected": 5,
+          "obtained": 5,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.score",
+          "expected": 5,
+          "obtained": 5,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.ulcera",
+          "expected": false,
+          "obtained": false,
+          "scope": "Existing source-audit transport regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "5",
+          "obtained": "5",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "de 33",
+          "obtained": "de 33",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        },
+        {
+          "key": "verdict",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "Seis itens moderados: 12, síndrome moderada",
+      "input": {
+        "dor": "2",
+        "peso": "2",
+        "edema": "2",
+        "induracao": "2",
+        "hiperpig": "2",
+        "ectasia": "2",
+        "ulcera": "0",
+        "caibras": "0",
+        "parestesia": "0",
+        "prurido": "0",
+        "rubor": "0",
+        "dor_compr": "0"
+      },
+      "obtained": {
+        "id": "escore-de-villalta",
+        "main": [
+          "12",
+          "de 33"
+        ],
+        "label": "Escore de Villalta",
+        "raw": {
+          "score": 12,
+          "ulcera": false
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.score",
+          "expected": 12,
+          "obtained": 12,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.score",
+          "expected": 12,
+          "obtained": 12,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.ulcera",
+          "expected": false,
+          "obtained": false,
+          "scope": "Existing source-audit transport regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "12",
+          "obtained": "12",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "de 33",
+          "obtained": "de 33",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        },
+        {
+          "key": "verdict",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "name": "Úlcera com 3 pontos: grave",
+      "input": {
+        "dor": "1",
+        "edema": "2",
+        "ulcera": "1",
+        "caibras": "0",
+        "peso": "0",
+        "parestesia": "0",
+        "prurido": "0",
+        "induracao": "0",
+        "hiperpig": "0",
+        "rubor": "0",
+        "ectasia": "0",
+        "dor_compr": "0"
+      },
+      "obtained": {
+        "id": "escore-de-villalta",
+        "main": [
+          "3",
+          "de 33"
+        ],
+        "label": "Escore de Villalta",
+        "raw": {
+          "score": 3,
+          "ulcera": true
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "checks": [
+        {
+          "at": "status",
+          "expected": 200,
+          "obtained": 200,
+          "passed": true
+        },
+        {
+          "at": "result-object",
+          "expected": true,
+          "obtained": true,
+          "passed": true
+        },
+        {
+          "at": "result.raw.score",
+          "expected": 3,
+          "obtained": 3,
+          "tolerance": 1e-8,
+          "difference": 0,
+          "scope": "Recorded source reference",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.score",
+          "expected": 3,
+          "obtained": 3,
+          "tolerance": 1e-10,
+          "difference": 0,
+          "scope": "Existing precise source-audit transport regression, not independent formula validation",
+          "passed": true
+        },
+        {
+          "at": "regression.result.raw.ulcera",
+          "expected": true,
+          "obtained": true,
+          "scope": "Existing source-audit transport regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main.length",
+          "expected": 2,
+          "obtained": 2,
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[0]",
+          "expected": "3",
+          "obtained": "3",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        },
+        {
+          "at": "regression.result.main[1]",
+          "expected": "de 33",
+          "obtained": "de 33",
+          "scope": "Existing source-audit public representation regression",
+          "passed": true
+        }
+      ],
+      "notCompared": [
+        {
+          "key": "level",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        },
+        {
+          "key": "verdict",
+          "reason": "Historical interpretative/explanatory expectation outside the bounded API and outside clinical approval"
+        }
+      ],
+      "status": "passed"
+    }
+  ],
+  "refusals": {
+    "passed": 40,
+    "failed": 0,
+    "failures": []
+  },
+  "sourceNodeBrowserVmParity": true,
+  "actualBrowserDomVerified": false,
+  "newIndependentOracle": false,
+  "currentActualR6HttpEvidence": "pending",
+  "clinicalApproval": false,
+  "professionalLanguageApproval": false
+}

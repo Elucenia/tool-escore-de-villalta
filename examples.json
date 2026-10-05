@@ -1,6 +1,12 @@
 [
   {
-    "label": "Tudo ausente: 0, sem síndrome",
+    "id": "escore-de-villalta",
+    "kind": "native-source-reference",
+    "index": 0,
+    "name": "Tudo ausente: 0, sem síndrome",
+    "originalInput": {
+      "ulcera": "0"
+    },
     "input": {
       "ulcera": "0",
       "dor": "0",
@@ -19,25 +25,39 @@
       "score": 0,
       "level": "low"
     },
-    "originalInput": {
-      "ulcera": "0"
+    "recordedResult": {
+      "main": [
+        "0",
+        "de 33"
+      ],
+      "label": "Escore de Villalta",
+      "raw": {
+        "score": 0,
+        "ulcera": false
+      }
     },
-    "expandedZeroOptions": [
-      "dor",
-      "caibras",
-      "peso",
-      "parestesia",
-      "prurido",
-      "edema",
-      "induracao",
-      "hiperpig",
-      "rubor",
-      "ectasia",
-      "dor_compr"
-    ]
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Cinco itens leves: 5, síndrome leve (limite)",
+    "id": "escore-de-villalta",
+    "kind": "native-source-reference",
+    "index": 1,
+    "name": "Cinco itens leves: 5, síndrome leve (limite)",
+    "originalInput": {
+      "dor": "1",
+      "caibras": "1",
+      "peso": "1",
+      "edema": "1",
+      "hiperpig": "1",
+      "ulcera": "0"
+    },
     "input": {
       "dor": "1",
       "caibras": "1",
@@ -57,25 +77,40 @@
       "level": "mid",
       "verdict": "leve"
     },
-    "originalInput": {
-      "dor": "1",
-      "caibras": "1",
-      "peso": "1",
-      "edema": "1",
-      "hiperpig": "1",
-      "ulcera": "0"
+    "recordedResult": {
+      "main": [
+        "5",
+        "de 33"
+      ],
+      "label": "Escore de Villalta",
+      "raw": {
+        "score": 5,
+        "ulcera": false
+      }
     },
-    "expandedZeroOptions": [
-      "parestesia",
-      "prurido",
-      "induracao",
-      "rubor",
-      "ectasia",
-      "dor_compr"
-    ]
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Seis itens moderados: 12, síndrome moderada",
+    "id": "escore-de-villalta",
+    "kind": "native-source-reference",
+    "index": 2,
+    "name": "Seis itens moderados: 12, síndrome moderada",
+    "originalInput": {
+      "dor": "2",
+      "peso": "2",
+      "edema": "2",
+      "induracao": "2",
+      "hiperpig": "2",
+      "ectasia": "2",
+      "ulcera": "0"
+    },
     "input": {
       "dor": "2",
       "peso": "2",
@@ -95,25 +130,36 @@
       "level": "high",
       "verdict": "moderada"
     },
-    "originalInput": {
-      "dor": "2",
-      "peso": "2",
-      "edema": "2",
-      "induracao": "2",
-      "hiperpig": "2",
-      "ectasia": "2",
-      "ulcera": "0"
+    "recordedResult": {
+      "main": [
+        "12",
+        "de 33"
+      ],
+      "label": "Escore de Villalta",
+      "raw": {
+        "score": 12,
+        "ulcera": false
+      }
     },
-    "expandedZeroOptions": [
-      "caibras",
-      "parestesia",
-      "prurido",
-      "rubor",
-      "dor_compr"
-    ]
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   },
   {
-    "label": "Úlcera com 3 pontos: grave",
+    "id": "escore-de-villalta",
+    "kind": "native-source-reference",
+    "index": 3,
+    "name": "Úlcera com 3 pontos: grave",
+    "originalInput": {
+      "dor": "1",
+      "edema": "2",
+      "ulcera": "1"
+    },
     "input": {
       "dor": "1",
       "edema": "2",
@@ -133,21 +179,24 @@
       "level": "high",
       "verdict": "grave"
     },
-    "originalInput": {
-      "dor": "1",
-      "edema": "2",
-      "ulcera": "1"
+    "recordedResult": {
+      "main": [
+        "3",
+        "de 33"
+      ],
+      "label": "Escore de Villalta",
+      "raw": {
+        "score": 3,
+        "ulcera": true
+      }
     },
-    "expandedZeroOptions": [
-      "caibras",
-      "peso",
-      "parestesia",
-      "prurido",
-      "induracao",
-      "hiperpig",
-      "rubor",
-      "ectasia",
-      "dor_compr"
-    ]
+    "provenance": {
+      "bank": {
+        "file": "reports/review-20261003/source-cases-audit.json",
+        "bytes": 885399,
+        "sha256": "1e609b8c90f6b7fef933d748f3ebd59836d4d06fe7b7e07ced569756091408d3"
+      },
+      "scope": "Existing recorded synthetic source expectations and source-audit transport baseline; no new independent oracle"
+    }
   }
 ]
