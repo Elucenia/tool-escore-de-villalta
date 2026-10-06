@@ -1,0 +1,507 @@
+{
+  "id": "escore-de-villalta",
+  "implementationVersion": "escore-de-villalta@native-2026-10-05+8688c105974f",
+  "scope": "Rendered current output against the same source method; not an independent numerical/clinical oracle",
+  "locales": {
+    "pt-BR": [
+      {
+        "name": "Tudo ausente: 0, sem síndrome",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Sem síndrome pós-trombótica",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Cinco itens leves: 5, síndrome leve (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Síndrome pós-trombótica leve",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Seis itens moderados: 12, síndrome moderada",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Síndrome pós-trombótica moderada",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Úlcera com 3 pontos: grave",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Síndrome pós-trombótica grave (presença de úlcera venosa)",
+            "locale": "pt-BR",
+            "template": "documented-source"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "en": [
+      {
+        "name": "Tudo ausente: 0, sem síndrome",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "No post-thrombotic syndrome",
+            "locale": "en",
+            "template": "documented-authored-976b708c025fe632cbeb"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Cinco itens leves: 5, síndrome leve (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Mild post-thrombotic syndrome",
+            "locale": "en",
+            "template": "documented-authored-74cf8a5f7935da2bdf12"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Seis itens moderados: 12, síndrome moderada",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Moderate post-thrombotic syndrome",
+            "locale": "en",
+            "template": "documented-authored-5345810eb217832909bf"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Úlcera com 3 pontos: grave",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Severe post-thrombotic syndrome (presence of venous ulcer)",
+            "locale": "en",
+            "template": "documented-authored-d9f6dcc859c6faa5bd52"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "es": [
+      {
+        "name": "Tudo ausente: 0, sem síndrome",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Sin síndrome postrombótico",
+            "locale": "es",
+            "template": "documented-authored-976b708c025fe632cbeb"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Cinco itens leves: 5, síndrome leve (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Síndrome postrombótico leve",
+            "locale": "es",
+            "template": "documented-authored-74cf8a5f7935da2bdf12"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Seis itens moderados: 12, síndrome moderada",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Síndrome postrombótico moderado",
+            "locale": "es",
+            "template": "documented-authored-5345810eb217832909bf"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Úlcera com 3 pontos: grave",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Síndrome postrombótico grave (presencia de úlcera venosa)",
+            "locale": "es",
+            "template": "documented-authored-d9f6dcc859c6faa5bd52"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "fr": [
+      {
+        "name": "Tudo ausente: 0, sem síndrome",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Pas de syndrome post-thrombotique",
+            "locale": "fr",
+            "template": "documented-authored-976b708c025fe632cbeb"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Cinco itens leves: 5, síndrome leve (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Syndrome post-thrombotique léger",
+            "locale": "fr",
+            "template": "documented-authored-74cf8a5f7935da2bdf12"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Seis itens moderados: 12, síndrome moderada",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Syndrome post-thrombotique modéré",
+            "locale": "fr",
+            "template": "documented-authored-5345810eb217832909bf"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Úlcera com 3 pontos: grave",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Syndrome post-thrombotique sévère (présence d’un ulcère veineux)",
+            "locale": "fr",
+            "template": "documented-authored-d9f6dcc859c6faa5bd52"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "de": [
+      {
+        "name": "Tudo ausente: 0, sem síndrome",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Kein postthrombotisches Syndrom",
+            "locale": "de",
+            "template": "documented-authored-976b708c025fe632cbeb"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Cinco itens leves: 5, síndrome leve (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Leichtes postthrombotisches Syndrom",
+            "locale": "de",
+            "template": "documented-authored-74cf8a5f7935da2bdf12"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Seis itens moderados: 12, síndrome moderada",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Mäßiges postthrombotisches Syndrom",
+            "locale": "de",
+            "template": "documented-authored-5345810eb217832909bf"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Úlcera com 3 pontos: grave",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Schweres postthrombotisches Syndrom (Vorliegen eines venösen Ulkus)",
+            "locale": "de",
+            "template": "documented-authored-d9f6dcc859c6faa5bd52"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "it": [
+      {
+        "name": "Tudo ausente: 0, sem síndrome",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Nessuna sindrome post-trombotica",
+            "locale": "it",
+            "template": "documented-authored-976b708c025fe632cbeb"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Cinco itens leves: 5, síndrome leve (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Sindrome post-trombotica lieve",
+            "locale": "it",
+            "template": "documented-authored-74cf8a5f7935da2bdf12"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Seis itens moderados: 12, síndrome moderada",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Sindrome post-trombotica moderata",
+            "locale": "it",
+            "template": "documented-authored-5345810eb217832909bf"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Úlcera com 3 pontos: grave",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "Sindrome post-trombotica grave (presenza di ulcera venosa)",
+            "locale": "it",
+            "template": "documented-authored-d9f6dcc859c6faa5bd52"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ar": [
+      {
+        "name": "Tudo ausente: 0, sem síndrome",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "لا توجد متلازمة ما بعد الخثار",
+            "locale": "ar",
+            "template": "documented-authored-976b708c025fe632cbeb"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Cinco itens leves: 5, síndrome leve (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "متلازمة ما بعد الخثار خفيفة",
+            "locale": "ar",
+            "template": "documented-authored-74cf8a5f7935da2bdf12"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Seis itens moderados: 12, síndrome moderada",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "متلازمة ما بعد الخثار متوسطة",
+            "locale": "ar",
+            "template": "documented-authored-5345810eb217832909bf"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Úlcera com 3 pontos: grave",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "متلازمة ما بعد الخثار شديدة (وجود قرحة وريدية)",
+            "locale": "ar",
+            "template": "documented-authored-d9f6dcc859c6faa5bd52"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "zh": [
+      {
+        "name": "Tudo ausente: 0, sem síndrome",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "无血栓后综合征",
+            "locale": "zh",
+            "template": "documented-authored-976b708c025fe632cbeb"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Cinco itens leves: 5, síndrome leve (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "轻度血栓后综合征",
+            "locale": "zh",
+            "template": "documented-authored-74cf8a5f7935da2bdf12"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Seis itens moderados: 12, síndrome moderada",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "中度血栓后综合征",
+            "locale": "zh",
+            "template": "documented-authored-5345810eb217832909bf"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Úlcera com 3 pontos: grave",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "重度血栓后综合征（存在静脉性溃疡）",
+            "locale": "zh",
+            "template": "documented-authored-d9f6dcc859c6faa5bd52"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "ja": [
+      {
+        "name": "Tudo ausente: 0, sem síndrome",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "血栓後症候群なし",
+            "locale": "ja",
+            "template": "documented-authored-976b708c025fe632cbeb"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Cinco itens leves: 5, síndrome leve (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "軽度の血栓後症候群",
+            "locale": "ja",
+            "template": "documented-authored-74cf8a5f7935da2bdf12"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Seis itens moderados: 12, síndrome moderada",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "中等度の血栓後症候群",
+            "locale": "ja",
+            "template": "documented-authored-5345810eb217832909bf"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Úlcera com 3 pontos: grave",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "重度の血栓後症候群（静脈性潰瘍の存在）",
+            "locale": "ja",
+            "template": "documented-authored-d9f6dcc859c6faa5bd52"
+          },
+          "level": "high"
+        }
+      }
+    ],
+    "hi": [
+      {
+        "name": "Tudo ausente: 0, sem síndrome",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "पोस्ट-थ्रोम्बोटिक सिंड्रोम नहीं",
+            "locale": "hi",
+            "template": "documented-authored-976b708c025fe632cbeb"
+          },
+          "level": "low"
+        }
+      },
+      {
+        "name": "Cinco itens leves: 5, síndrome leve (limite)",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "हल्का पोस्ट-थ्रोम्बोटिक सिंड्रोम",
+            "locale": "hi",
+            "template": "documented-authored-74cf8a5f7935da2bdf12"
+          },
+          "level": "mid"
+        }
+      },
+      {
+        "name": "Seis itens moderados: 12, síndrome moderada",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "मध्यम पोस्ट-थ्रोम्बोटिक सिंड्रोम",
+            "locale": "hi",
+            "template": "documented-authored-5345810eb217832909bf"
+          },
+          "level": "high"
+        }
+      },
+      {
+        "name": "Úlcera com 3 pontos: grave",
+        "output": {
+          "rows": [],
+          "verdict": {
+            "text": "गंभीर पोस्ट-थ्रोम्बोटिक सिंड्रोम (शिरापरक अल्सर की उपस्थिति)",
+            "locale": "hi",
+            "template": "documented-authored-d9f6dcc859c6faa5bd52"
+          },
+          "level": "high"
+        }
+      }
+    ]
+  }
+}

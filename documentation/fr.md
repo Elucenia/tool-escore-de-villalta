@@ -159,3 +159,27 @@ Résultat de la formule ou de la classification. L’interprétation, la conduit
 Apache-2.0 s’applique uniquement au code d’ELUCENIA. Les droits sur les instruments, publications, traductions et données restent ceux de leurs titulaires respectifs. Conservez LICENSE et NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Résultats documentés
+
+Les informations ci-dessous conservent les sorties de la méthode pour des exemples synthétiques. Elles ne constituent pas une validation clinique indépendante.
+
+### 1
+
+Pas de syndrome post-thrombotique
+
+
+### 2
+
+Syndrome post-thrombotique léger
+
+
+### 3
+
+Syndrome post-thrombotique modéré
+
+
+### 4
+
+Syndrome post-thrombotique sévère (présence d’un ulcère veineux)
+

@@ -1,0 +1,255 @@
+{
+  "schema": "elucenia-public-source-result-preservation-v1",
+  "id": "escore-de-villalta",
+  "source": {
+    "baselineFile": "reports/review-20261005-completion/public-native-output-baseline-r2/baseline.json",
+    "baselineSha256": "e5f274fa5acc74566e1c3d55afb6bb402ad9928337dd77a2945442f5b6c49439",
+    "previousCommit": "376ef4717c264eb6871cd8735955ff038d43ad77",
+    "oldEngineSha256": "6d3d6830367b97a4d312f4036b339a68f2d7bda607a9ac347ed6b27a40bb2e53",
+    "currentEngineSha256": "8688c105974fbadfc2910df4d413f50368abb44311f30eabddc567c26da0c6f6"
+  },
+  "scope": "Existing synthetic inputs and same pinned mathematical-function outputs. Clinical interpretation correctness and professional translation are separate unperformed reviews.",
+  "clinicalApproval": "not-performed",
+  "professionalLanguageReview": "not-performed",
+  "cases": [
+    {
+      "caseIndex": 0,
+      "name": "Tudo ausente: 0, sem síndrome",
+      "input": {
+        "ulcera": "0",
+        "dor": "0",
+        "caibras": "0",
+        "peso": "0",
+        "parestesia": "0",
+        "prurido": "0",
+        "edema": "0",
+        "induracao": "0",
+        "hiperpig": "0",
+        "rubor": "0",
+        "ectasia": "0",
+        "dor_compr": "0"
+      },
+      "publicOutput": {
+        "id": "escore-de-villalta",
+        "main": [
+          "0",
+          "de 33"
+        ],
+        "label": "Escore de Villalta",
+        "raw": {
+          "score": 0,
+          "ulcera": false
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 0,
+        "level": "low"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "0",
+          "de 33"
+        ],
+        "label": "Escore de Villalta",
+        "level": "low",
+        "verdict": "Sem síndrome pós-trombótica",
+        "raw": {
+          "score": 0,
+          "ulcera": false
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 1,
+      "name": "Cinco itens leves: 5, síndrome leve (limite)",
+      "input": {
+        "dor": "1",
+        "caibras": "1",
+        "peso": "1",
+        "edema": "1",
+        "hiperpig": "1",
+        "ulcera": "0",
+        "parestesia": "0",
+        "prurido": "0",
+        "induracao": "0",
+        "rubor": "0",
+        "ectasia": "0",
+        "dor_compr": "0"
+      },
+      "publicOutput": {
+        "id": "escore-de-villalta",
+        "main": [
+          "5",
+          "de 33"
+        ],
+        "label": "Escore de Villalta",
+        "raw": {
+          "score": 5,
+          "ulcera": false
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 5,
+        "level": "mid",
+        "verdict": "leve"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "5",
+          "de 33"
+        ],
+        "label": "Escore de Villalta",
+        "level": "mid",
+        "verdict": "Síndrome pós-trombótica leve",
+        "raw": {
+          "score": 5,
+          "ulcera": false
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 2,
+      "name": "Seis itens moderados: 12, síndrome moderada",
+      "input": {
+        "dor": "2",
+        "peso": "2",
+        "edema": "2",
+        "induracao": "2",
+        "hiperpig": "2",
+        "ectasia": "2",
+        "ulcera": "0",
+        "caibras": "0",
+        "parestesia": "0",
+        "prurido": "0",
+        "rubor": "0",
+        "dor_compr": "0"
+      },
+      "publicOutput": {
+        "id": "escore-de-villalta",
+        "main": [
+          "12",
+          "de 33"
+        ],
+        "label": "Escore de Villalta",
+        "raw": {
+          "score": 12,
+          "ulcera": false
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 12,
+        "level": "high",
+        "verdict": "moderada"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "12",
+          "de 33"
+        ],
+        "label": "Escore de Villalta",
+        "level": "high",
+        "verdict": "Síndrome pós-trombótica moderada",
+        "raw": {
+          "score": 12,
+          "ulcera": false
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    },
+    {
+      "caseIndex": 3,
+      "name": "Úlcera com 3 pontos: grave",
+      "input": {
+        "dor": "1",
+        "edema": "2",
+        "ulcera": "1",
+        "caibras": "0",
+        "peso": "0",
+        "parestesia": "0",
+        "prurido": "0",
+        "induracao": "0",
+        "hiperpig": "0",
+        "rubor": "0",
+        "ectasia": "0",
+        "dor_compr": "0"
+      },
+      "publicOutput": {
+        "id": "escore-de-villalta",
+        "main": [
+          "3",
+          "de 33"
+        ],
+        "label": "Escore de Villalta",
+        "raw": {
+          "score": 3,
+          "ulcera": true
+        },
+        "clinicalValidation": "not-performed"
+      },
+      "sourceExpected": {
+        "score": 3,
+        "level": "high",
+        "verdict": "grave"
+      },
+      "inspectedSourceOutput": {
+        "main": [
+          "3",
+          "de 33"
+        ],
+        "label": "Escore de Villalta",
+        "level": "high",
+        "verdict": "Síndrome pós-trombótica grave (presença de úlcera venosa)",
+        "raw": {
+          "score": 3,
+          "ulcera": true
+        }
+      },
+      "numericEquality": true,
+      "inspectionScope": "Same pinned source function, inspected in memory; not an independent formula/clinical oracle.",
+      "state": "source-transport-comparable",
+      "nonemptySourceFields": [
+        "verdict",
+        "level"
+      ],
+      "missingPublicFields": [
+        "verdict",
+        "level"
+      ]
+    }
+  ]
+}

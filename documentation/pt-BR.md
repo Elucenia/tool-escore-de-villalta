@@ -159,3 +159,27 @@ Resultado da fórmula ou classificação. Interpretação, conduta e aplicabilid
 Apache-2.0 aplica-se somente ao código da ELUCENIA. Os instrumentos, publicações, traduções e dados mantêm os direitos dos respectivos titulares. Preserve LICENSE e NOTICE.
 
 ELUCENIA · Felipe Guedes · Copyright © 2026
+
+## Resultados documentados
+
+As informações abaixo preservam as saídas do método para exemplos sintéticos. Não constituem validação clínica independente.
+
+### 1
+
+Sem síndrome pós-trombótica
+
+
+### 2
+
+Síndrome pós-trombótica leve
+
+
+### 3
+
+Síndrome pós-trombótica moderada
+
+
+### 4
+
+Síndrome pós-trombótica grave (presença de úlcera venosa)
+

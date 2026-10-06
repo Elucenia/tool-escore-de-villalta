@@ -413,7 +413,7 @@
       "publicCandidateBankOmitted": true
     },
     "methodVersion": "Villalta/definição ISTH 2009:5 sintomas+6 sinais 0–3, total 0–33; úlcera agravante",
-    "implementationVersion": "escore-de-villalta@native-2026-10-03+6d3d6830367b",
+    "implementationVersion": "escore-de-villalta@native-2026-10-05+8688c105974f",
     "currentMethodSource": "https://pubmed.ncbi.nlm.nih.gov/19175497/",
     "versionEvidence": {
       "status": "variant-and-source-edition-recorded",
@@ -769,7 +769,35 @@
       "clinicalApproval": "not-performed",
       "translationApproval": "not-performed",
       "releaseApproval": "not-performed",
-      "implementationHash": "6d3d6830367b97a4d312f4036b339a68f2d7bda607a9ac347ed6b27a40bb2e53"
+      "implementationHash": "8688c105974fbadfc2910df4d413f50368abb44311f30eabddc567c26da0c6f6",
+      "documentedOutputContract": {
+        "fields": [
+          "level",
+          "verdict",
+          "rows",
+          "note"
+        ],
+        "scope": "Optional documented outputs already produced by the existing scientific method; no new classification or treatment decision.",
+        "sourceExposureReceipt": {
+          "file": "reports/review-20261005-completion/native-result-presentation-r1/applied-output-r1/receipt.json",
+          "sha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        },
+        "scientificBodiesUnchanged": true,
+        "clinicalApproval": "not-performed",
+        "professionalLanguageApproval": "not-performed"
+      },
+      "technicalBindingHistory": [
+        {
+          "recordedAt": "2026-10-05T23:55:42.176Z",
+          "scope": "Expose existing documented result fields; scientific body and complete input contract unchanged.",
+          "previousImplementationVersion": "escore-de-villalta@native-2026-10-03+6d3d6830367b",
+          "previousImplementationHash": "6d3d6830367b97a4d312f4036b339a68f2d7bda607a9ac347ed6b27a40bb2e53",
+          "implementationHash": "8688c105974fbadfc2910df4d413f50368abb44311f30eabddc567c26da0c6f6",
+          "scientificBodySha256": "2eaed5a0786b8ebac675602245b9cc5a0b653c671f05cbb861f9ac0794de12c1",
+          "metadataContractHash": "7ca6adf3a388bf50589fb7cb5221c1c1b28afb237acf048504f2ed80b2fb2750",
+          "exposureReceiptSha256": "ad5471530e501b906b966463cef1eb20e9745ac745fc30fb85d3ec4db2a333c3"
+        }
+      ]
     },
     "limits": "A avaliação de síndrome pós-trombótica recomendada pela ISTH considera sinais e sintomas em membro previamente afetado por TVP e reconhece que não existe teste objetivo único de referência. Momento de avaliação, causas alternativas e critérios da versão são necessários; a soma isolada não confirma etiologia de edema ou dor.",
     "sourceLimitEvidence": {
@@ -788,20 +816,20 @@
   },
   "currentSource": {
     "file": "apps/website/private/tool-code/escore-de-villalta/calculator.js",
-    "bytes": 5930,
-    "sha256": "6d3d6830367b97a4d312f4036b339a68f2d7bda607a9ac347ed6b27a40bb2e53"
+    "bytes": 6135,
+    "sha256": "8688c105974fbadfc2910df4d413f50368abb44311f30eabddc567c26da0c6f6"
   },
-  "sourceToolSha256": "534a37c16b6e007a473f05c416f618693b4a1093d5530e4f984f0db152212f11",
+  "sourceToolSha256": "b44ad8029ddb52a75530c1fb28a502a5b151b9a02458c505446eaedd2603df4c",
   "omittedFullReferenceBanks": [
     {
       "rows": 4,
       "sha256": "5865fa6ba76b3df3bb984da267acaafb6e16090ad3d711336171835b8c209af2",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     },
     {
       "rows": 4,
       "sha256": "5865fa6ba76b3df3bb984da267acaafb6e16090ad3d711336171835b8c209af2",
-      "reason": "Large independent reference bank not bundled; exact evidence scope and file references retained"
+      "reason": "Large independent reference bank not bundled; historical proof scope retained"
     }
   ],
   "clinicalApproval": "not-performed",
